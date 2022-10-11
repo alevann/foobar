@@ -1,5 +1,6 @@
 package com.avnnn.foobar;
 
+import com.avnnn.foobar.two.ProblemTwo;
 import com.avnnn.foobar.one.ProblemOne;
 
 /**
@@ -26,6 +27,7 @@ public enum Number {
             case One:
                 return new ProblemOne();
             case Two:
+                return new ProblemTwo();
             default:
                 throw new IllegalStateException("You forgot to assign a problem here, man.");
         }

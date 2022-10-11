@@ -8,10 +8,12 @@ package com.avnnn.foobar;
  */
 public class FooBar {
 
-    public static void main (String[] args) {
-        Result[] results = Problem.solve(Number.One);
+    private static final Number PROBLEM = Number.Two;
 
-        Printer.prompt(Number.One);
+    public static void main (String[] args) {
+        Result[] results = Problem.solve(PROBLEM);
+
+        Printer.prompt(PROBLEM);
         Printer.results(results);
     }
 }
