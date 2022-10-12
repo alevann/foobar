@@ -70,12 +70,12 @@ public class Printer {
     }
 
     private static void passed(Result result) {
-        out.printf("%s ✔️✅\tPassed%s test case %d%n", ANSI_GREEN, ANSI_RESET, result.id);
+        out.printf("%s ✔️ \tPassed%s test case %d%n", ANSI_GREEN, ANSI_RESET, result.id);
     }
 
     private static void failed(Result result) {
         out.printf(
-                "%s❌ ✗\tFailed%s test case %d: expected %s got %s%n",
+                "%s ✗ \tFailed%s test case %d: expected %s got %s%n",
                 ANSI_RED,
                 ANSI_RESET,
                 result.id,
