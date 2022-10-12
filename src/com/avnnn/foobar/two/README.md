@@ -22,13 +22,13 @@ At first, I considered building all possible combinations of numbers to then sor
 Next I tried breaking up the problem a bunch, and I divided it into two smaller problems and that worked, for the most part.
 The basic idea is there, but I was missing a crucial step that I had not yet considered at the time: I needed to be able to break up a sum into addends, I'll touch on this later.
 
-Anyways, after a bunch of failed attempts and lots of thinking, I eventually broke the problem into these steps:
+Anyway, after a bunch of failed attempts and lots of thinking, I eventually broke the problem into these steps:
 
 1. Given a list, remove the least amount of numbers to make the sum of the list be divisible by 3
 2. Given a list, a sum, and the number of addends, find the best possible candidates to reach the sum
 3. Given a list, build the biggest possible number out of it
 
-Let's take it from the bottom, problem number 3 was quite easy to solve as I had done something like this many times before, here's the pseudo-code for it:
+Let's take it from the bottom, problem number 3 was quite easy to solve as I had done something like this many times before, here's the pseudocode for it:
 
 ```
 def ArrayToInt ( int array Array ):
