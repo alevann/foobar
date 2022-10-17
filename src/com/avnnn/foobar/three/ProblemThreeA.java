@@ -2,14 +2,6 @@ package com.avnnn.foobar.three;
 
 import com.avnnn.foobar.Problem;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.IntUnaryOperator;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 /**
  * Created on: 17/10/2022
  *

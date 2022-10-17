@@ -9,9 +9,9 @@ package com.avnnn.foobar;
 public abstract class Problem<S, A> {
 
     protected abstract String prompt();
-    protected abstract S solution(A a);
     protected abstract A[] args();
     protected abstract S[] expected();
+    protected abstract S solution(A a);
 
     public static Result[] solve(Number number) {
         Problem<Object, Object> problem = number.problem();
