@@ -8,7 +8,7 @@ package com.avnnn.foobar;
  */
 public class FooBar {
 
-    private static final Number PROBLEM = Number.TwoB;
+    private static final Number PROBLEM = Number.ThreeA;
 
     public static void main (String[] args) {
         Result[] results = Problem.solve(PROBLEM);

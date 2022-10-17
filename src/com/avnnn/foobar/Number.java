@@ -1,5 +1,6 @@
 package com.avnnn.foobar;
 
+import com.avnnn.foobar.three.ProblemThreeA;
 import com.avnnn.foobar.two.a.ProblemTwoA;
 import com.avnnn.foobar.one.ProblemOne;
 import com.avnnn.foobar.two.b.ProblemTwoB;
@@ -13,7 +14,8 @@ import com.avnnn.foobar.two.b.ProblemTwoB;
 public enum Number {
     One,
     TwoA,
-    TwoB;
+    TwoB,
+    ThreeA;
 
     private Problem<?, ?> problem;
 
@@ -32,6 +34,8 @@ public enum Number {
                 return new ProblemTwoA();
             case TwoB:
                 return new ProblemTwoB();
+            case ThreeA:
+                return new ProblemThreeA();
             default:
                 throw new IllegalStateException("You forgot to assign a problem here, man.");
         }
