@@ -1,4 +1,4 @@
-package com.avnnn.foobar.two;
+package com.avnnn.foobar.two.a;
 
 import com.avnnn.foobar.Problem;
 
@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
  * @author alessandrovnnn@gmail.com
  * @since 1.0.0
  */
-public class ProblemTwo extends Problem<Integer, Integer[]> {
+public class ProblemTwoA extends Problem<Integer, Integer[]> {
 
     @Override
     protected String prompt() {

@@ -1,7 +1,8 @@
 package com.avnnn.foobar;
 
-import com.avnnn.foobar.two.ProblemTwo;
+import com.avnnn.foobar.two.a.ProblemTwoA;
 import com.avnnn.foobar.one.ProblemOne;
+import com.avnnn.foobar.two.b.ProblemTwoB;
 
 /**
  * Created on: 11/10/2022
@@ -11,7 +12,8 @@ import com.avnnn.foobar.one.ProblemOne;
  */
 public enum Number {
     One,
-    Two;
+    TwoA,
+    TwoB;
 
     private Problem<?, ?> problem;
 
@@ -26,8 +28,10 @@ public enum Number {
         switch (this) {
             case One:
                 return new ProblemOne();
-            case Two:
-                return new ProblemTwo();
+            case TwoA:
+                return new ProblemTwoA();
+            case TwoB:
+                return new ProblemTwoB();
             default:
                 throw new IllegalStateException("You forgot to assign a problem here, man.");
         }
