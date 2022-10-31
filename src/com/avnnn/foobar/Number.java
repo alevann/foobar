@@ -29,19 +29,13 @@ public enum Number {
     }
 
     private Problem<?, ?> getProblem () {
-        switch (this) {
-            case One:
-                return new ProblemOne();
-            case TwoA:
-                return new ProblemTwoA();
-            case TwoB:
-                return new ProblemTwoB();
-            case ThreeA:
-                return new ProblemThreeA();
-            case ThreeB:
-                return new ProblemThreeB();
-            default:
-                throw new IllegalStateException("You forgot to assign a problem here, man.");
-        }
+        return switch (this) {
+            case One -> new ProblemOne();
+            case TwoA -> new ProblemTwoA();
+            case TwoB -> new ProblemTwoB();
+            case ThreeA -> new ProblemThreeA();
+            case ThreeB -> new ProblemThreeB();
+            default -> throw new IllegalStateException("You forgot to assign a problem here, man.");
+        };
     }
 }
