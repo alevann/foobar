@@ -70,17 +70,18 @@ public class Printer {
     }
 
     private static void passed(Result result) {
-        out.printf("%s ✔️ \tPassed%s test case %d%n", ANSI_GREEN, ANSI_RESET, result.id);
+        out.printf("%s ✔️\tPassed%s test case %d (%dms)%n", ANSI_GREEN, ANSI_RESET, result.id, result.elapsed.toMillis());
     }
 
     private static void failed(Result result) {
         out.printf(
-                "%s ✗ \tFailed%s test case %d: expected %s got %s%n",
+                "%s ✗ \tFailed%s test case %d: expected %s got %s (%dms)%n",
                 ANSI_RED,
                 ANSI_RESET,
                 result.id,
                 result.expected.toString(),
-                result.output
+                result.output,
+                result.elapsed.toMillis()
         );
 
         // Kind of a hack, but it works in IntelliJ

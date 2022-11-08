@@ -1,5 +1,8 @@
 package com.avnnn.foobar;
 
+import java.time.Duration;
+import java.time.Instant;
+
 /**
  * Created on: 11/10/2022
  *
@@ -28,6 +31,8 @@ public abstract class Problem<S, A> {
             boolean passed = false;
             Object output = null;
             Exception err = null;
+
+            Instant start = Instant.now();
             try {
                 output = problem.solution(args[i]);
                 passed = output.equals(expected[i]);
@@ -35,7 +40,9 @@ public abstract class Problem<S, A> {
                 err = e;
             }
 
-            results[i] = new Result(i, passed, output, expected[i], err);
+            Duration elapsed = Duration.between(start, Instant.now());
+
+            results[i] = new Result(i, passed, output, expected[i], elapsed, err);
         }
 
         return results;
