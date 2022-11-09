@@ -2,6 +2,7 @@ package com.avnnn.foobar;
 
 import com.avnnn.foobar.three.ProblemThreeA;
 import com.avnnn.foobar.three.ProblemThreeB;
+import com.avnnn.foobar.three.ProblemThreeC;
 import com.avnnn.foobar.two.a.ProblemTwoA;
 import com.avnnn.foobar.one.ProblemOne;
 import com.avnnn.foobar.two.b.ProblemTwoB;
@@ -17,7 +18,8 @@ public enum Number {
     TwoA,
     TwoB,
     ThreeA,
-    ThreeB;
+    ThreeB,
+    ThreeC;
 
     private Problem<?, ?> problem;
 
@@ -29,13 +31,21 @@ public enum Number {
     }
 
     private Problem<?, ?> getProblem () {
-        return switch (this) {
-            case One -> new ProblemOne();
-            case TwoA -> new ProblemTwoA();
-            case TwoB -> new ProblemTwoB();
-            case ThreeA -> new ProblemThreeA();
-            case ThreeB -> new ProblemThreeB();
-            default -> throw new IllegalStateException("You forgot to assign a problem here, man.");
-        };
+        switch (this) {
+            case One:
+                return new ProblemOne();
+            case TwoA:
+                return new ProblemTwoA();
+            case TwoB:
+                return new ProblemTwoB();
+            case ThreeA:
+                return new ProblemThreeA();
+            case ThreeB:
+                return new ProblemThreeB();
+            case ThreeC:
+                return new ProblemThreeC();
+            default:
+                throw new IllegalStateException("You forgot to assign a problem here, man.");
+        }
     }
 }
